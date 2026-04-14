@@ -1,0 +1,62 @@
+{
+    "date": "2026-04-02 11:47:42",
+    "dataset": "SIBI Lip Reading \u2014 Label Gabungan (18 Kelas)",
+    "total_videos": 3600,
+    "expected": 3600,
+    "status": "COMPLETE",
+    "split": {
+        "train": 2520,
+        "val": 720,
+        "test": 360
+    },
+    "class_balanced": true,
+    "classes": {
+        "angka": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9",
+            "10"
+        ],
+        "alphabet": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+        ],
+        "kata": [
+            "buku",
+            "dia",
+            "saya",
+            "keliling",
+            "kelompok",
+            "sekarang"
+        ]
+    },
+    "video_props": {
+        "fps": 30.0,
+        "dominant_res": "800x800",
+        "duration_mean": 1.43,
+        "duration_range": [
+            0.43,
+            2.9
+        ],
+        "frames_mean": 42.8,
+        "frames_range": [
+            13,
+            87
+        ]
+    },
+    "preprocess_plan": {
+        "target_frames": 30,
+        "method": "frame difference",
+        "lip_crop": [
+            64,
+            64
+        ],
+        "input_shape": "(batch, 3, 30, 64, 64)"
+    }
+}

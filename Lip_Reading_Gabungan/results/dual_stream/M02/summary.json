@@ -1,0 +1,74 @@
+{
+  "variant_id": "Dual-M02",
+  "variant_name": "Dual-M02 \u2014 Dual-Stream M02 (CNN 32\u219264\u2192128 | LSTM 128\u2192128 | Feat 128-dim)",
+  "architecture": {
+    "rgb_encoder": "StreamEncoder M02: CNN [32,64,128] + LSTM [128,128] \u2192 128-dim",
+    "flow_encoder": "StreamEncoder M02: CNN [32,64,128] + LSTM [128,128] \u2192 128-dim",
+    "fusion": "AttentionFusion (feat_dim=128, gate 256\u2192128)",
+    "head": "FC(128\u2192256) + ReLU + Dropout(0.5) + FC(256\u2192N)"
+  },
+  "vs_single_stream": {
+    "M02_baseline_test": 85.0,
+    "P17_M02_test": 53.48,
+    "note": "Kedua encoder identik secara arsitektur, berbeda di input modality"
+  },
+  "config": {
+    "cnn_channels": [
+      32,
+      64,
+      128
+    ],
+    "lstm_hiddens": [
+      128,
+      128
+    ],
+    "feat_dim": 128,
+    "dropout": 0.5,
+    "fc_hidden": 256,
+    "rgb_seq": 30,
+    "flow_seq": 29,
+    "flow_config": "P17 (maxCorners=300, qualityLevel=0.005, blockSize=6)"
+  },
+  "training": {
+    "total_params": 5011474,
+    "trainable_params": 5011474,
+    "model_size_mb": 20.05,
+    "inference_ms": 20.19,
+    "best_epoch": 83,
+    "best_val_acc": 87.2222,
+    "batch_size": 8,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "scheduler_patience": 8,
+    "total_time_min": 225.44,
+    "avg_epoch_sec": 135.3
+  },
+  "test_results": {
+    "test_loss": 0.8411,
+    "accuracy": 86.6295,
+    "f1_macro": 86.6117,
+    "f1_weighted": 86.5958,
+    "precision_weighted": 86.8455,
+    "recall_weighted": 86.6295,
+    "per_class_acc": {
+      "1": 100.0,
+      "2": 90.0,
+      "3": 85.0,
+      "8": 100.0,
+      "9": 94.74,
+      "10": 95.0,
+      "a": 100.0,
+      "b": 95.0,
+      "c": 75.0,
+      "d": 80.0,
+      "e": 75.0,
+      "f": 95.0,
+      "buku": 90.0,
+      "dia": 80.0,
+      "saya": 80.0,
+      "keliling": 75.0,
+      "kelompok": 75.0,
+      "sekarang": 75.0
+    }
+  }
+}

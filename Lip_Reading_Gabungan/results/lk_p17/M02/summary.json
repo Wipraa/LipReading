@@ -1,0 +1,60 @@
+{
+  "variant_id": "P17-M02",
+  "variant_name": "P17-M02 \u2014 LSTM hidden layer-2 = 128 (CNN 32\u219264\u2192128 | LSTM 128\u2192128 | Drop 0.5)",
+  "flow_config": "P17 (maxCorners=300, qualityLevel=0.005, blockSize=6)",
+  "config": {
+    "cnn_channels": [
+      32,
+      64,
+      128
+    ],
+    "lstm_hiddens": [
+      128,
+      128
+    ],
+    "dropout": 0.5,
+    "fc_hidden": 256,
+    "seq_len": 29,
+    "input_channels": "u, v, magnitude (optical flow P17)"
+  },
+  "training": {
+    "total_params": 2491666,
+    "trainable_params": 2491666,
+    "model_size_mb": 9.97,
+    "best_epoch": 97,
+    "best_val_acc": 51.5278,
+    "batch_size": 8,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "total_time_min": 112.08,
+    "avg_epoch_sec": 67.2
+  },
+  "test_results": {
+    "test_loss": 2.5808,
+    "accuracy": 53.4819,
+    "f1_macro": 54.0485,
+    "f1_weighted": 54.0257,
+    "precision_weighted": 55.5078,
+    "recall_weighted": 53.4819,
+    "per_class_acc": {
+      "1": 60.0,
+      "2": 65.0,
+      "3": 35.0,
+      "8": 65.0,
+      "9": 73.68,
+      "10": 80.0,
+      "a": 50.0,
+      "b": 70.0,
+      "c": 25.0,
+      "d": 10.0,
+      "e": 40.0,
+      "f": 55.0,
+      "buku": 60.0,
+      "dia": 70.0,
+      "saya": 35.0,
+      "keliling": 70.0,
+      "kelompok": 70.0,
+      "sekarang": 30.0
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+    "paths": {
+        "base_dir": "/home/wipra-ranum/Documents/Skripsi/LipReading",
+        "project_root": "/home/wipra-ranum/Documents/Skripsi/LipReading/Lip_Reading_Gabungan",
+        "data_root": "/home/wipra-ranum/Documents/Skripsi/LipReading/Dependent",
+        "raw_lips_dir": "/home/wipra-ranum/Documents/Skripsi/LipReading/Lip_Reading_Gabungan/preprocessed/dependent/raw_lips",
+        "optical_flows_dir": "/home/wipra-ranum/Documents/Skripsi/LipReading/Lip_Reading_Gabungan/preprocessed/dependent/optical_flows",
+        "models_dir": "/home/wipra-ranum/Documents/Skripsi/LipReading/Lip_Reading_Gabungan/models",
+        "logs_dir": "/home/wipra-ranum/Documents/Skripsi/LipReading/Lip_Reading_Gabungan/logs",
+        "results_dir": "/home/wipra-ranum/Documents/Skripsi/LipReading/Lip_Reading_Gabungan/results"
+    },
+    "data": {
+        "classes": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9",
+            "10",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "buku",
+            "dia",
+            "saya",
+            "keliling",
+            "kelompok",
+            "sekarang"
+        ],
+        "classes_angka": [
+            "1",
+            "2",
+            "3",
+            "8",
+            "9",
+            "10"
+        ],
+        "classes_alphabet": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+        ],
+        "classes_kata": [
+            "buku",
+            "dia",
+            "saya",
+            "keliling",
+            "kelompok",
+            "sekarang"
+        ],
+        "num_classes": 18,
+        "splits": [
+            "train",
+            "val",
+            "test"
+        ],
+        "videos_per_label": {
+            "train": 140,
+            "val": 40,
+            "test": 20
+        },
+        "total_videos": 3600
+    },
+    "preprocessing": {
+        "num_frames": 30,
+        "lip_size": [
+            64,
+            64
+        ],
+        "frame_selection_method": "difference",
+        "face_detector": "MediaPipe"
+    },
+    "optical_flow": {
+        "method": "Lucas-Kanade",
+        "normalization": "global"
+    },
+    "training": {
+        "batch_size": 4,
+        "num_epochs": 30,
+        "learning_rate": 0.001,
+        "num_workers": 2,
+        "sequence_length": 30,
+        "input_size": 64,
+        "input_channels": 3,
+        "num_classes": 18
+    }
+}

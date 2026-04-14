@@ -1,0 +1,11 @@
+split,class,file,reason
+train,b,S3_subject-3-alphabet-b-rep-6.npy,"QH6013 qhull input error: input is less than 3-dimensional since all points have the same x coordinate   53
+
+While executing:  | qhull d Qt Qbb Qz Qc Q12
+Options selected for Qhull 2020.2.r 2020/08/31:
+  run-id 1506440084  delaunay  Qtriangulate  Qbbound-last  Qz-infinity-point
+  Qcoplanar-keep  Q12-allow-wide  _pre-merge  _zero-centrum  Qinterior-keep
+  Pgood  _max-width 39  Error-roundoff 9e-14  _one-merge 6.3e-13
+  Visible-distance 1.8e-13  U-max-coplanar 1.8e-13  Width-outside 3.6e-13
+  _wide-facet 1.1e-12  _maxoutside 7.2e-13
+"

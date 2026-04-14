@@ -1,0 +1,53 @@
+{
+  "model": "Baseline Conv2D + ConvLSTM (RGB only)",
+  "dataset": "SIBI Dependent Gabungan",
+  "model_info": {
+    "total_params": 1737746,
+    "trainable_params": 1737746,
+    "model_size_mb": 6.95,
+    "gflops": "~0.104 GFLOPs (estimasi)",
+    "inference_ms": 8.0
+  },
+  "training": {
+    "epochs_trained": 100,
+    "best_epoch": 48,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "optimizer": "Adam",
+    "scheduler": "ReduceLROnPlateau (max, factor=0.5, patience=5)",
+    "best_val_acc": 84.5833,
+    "total_time_minutes": 98.12,
+    "avg_epoch_time_sec": 58.9
+  },
+  "test_results": {
+    "test_loss": 0.8074,
+    "accuracy": 83.0556,
+    "precision_macro": 83.4137,
+    "precision_weighted": 83.4137,
+    "recall_macro": 83.0556,
+    "recall_weighted": 83.0556,
+    "f1_macro": 82.9605,
+    "f1_weighted": 82.9605,
+    "per_class_acc": {
+      "1": 90.0,
+      "2": 90.0,
+      "3": 80.0,
+      "8": 95.0,
+      "9": 90.0,
+      "10": 100.0,
+      "a": 100.0,
+      "b": 95.0,
+      "c": 60.0,
+      "d": 80.0,
+      "e": 85.0,
+      "f": 100.0,
+      "buku": 90.0,
+      "dia": 70.0,
+      "saya": 60.0,
+      "keliling": 65.0,
+      "kelompok": 75.0,
+      "sekarang": 70.0
+    }
+  }
+}

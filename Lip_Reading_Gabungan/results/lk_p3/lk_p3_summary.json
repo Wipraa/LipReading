@@ -1,0 +1,56 @@
+{
+  "model": "Conv2D + ConvLSTM (Lucas-Kanade P3)",
+  "dataset": "SIBI Dependent Gabungan",
+  "model_info": {
+    "total_params": 1737746,
+    "trainable_params": 1737746,
+    "model_size_mb": 6.95,
+    "gflops": "~0.101 GFLOPs (estimasi)",
+    "inference_ms": 7.71,
+    "input_shape": "[B, 3, 29, 96, 96]",
+    "input_channels": "u, v, magnitude"
+  },
+  "training": {
+    "epochs_trained": 100,
+    "best_epoch": 57,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "optimizer": "Adam",
+    "scheduler": "ReduceLROnPlateau (max, factor=0.5, patience=5)",
+    "augmentation": "horizontal flip + negate u channel",
+    "best_val_acc": 51.5278,
+    "total_time_minutes": 95.01,
+    "avg_epoch_time_sec": 57.0
+  },
+  "test_results": {
+    "test_loss": 2.9513,
+    "accuracy": 47.7778,
+    "precision_macro": 48.1293,
+    "precision_weighted": 48.1293,
+    "recall_macro": 47.7778,
+    "recall_weighted": 47.7778,
+    "f1_macro": 47.1665,
+    "f1_weighted": 47.1665,
+    "per_class_acc": {
+      "1": 45.0,
+      "2": 40.0,
+      "3": 30.0,
+      "8": 80.0,
+      "9": 30.0,
+      "10": 60.0,
+      "a": 60.0,
+      "b": 65.0,
+      "c": 20.0,
+      "d": 30.0,
+      "e": 35.0,
+      "f": 50.0,
+      "buku": 45.0,
+      "dia": 60.0,
+      "saya": 15.0,
+      "keliling": 65.0,
+      "kelompok": 65.0,
+      "sekarang": 65.0
+    }
+  }
+}

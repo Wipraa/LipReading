@@ -1,0 +1,57 @@
+{
+  "variant_id": "M05",
+  "variant_name": "M05 \u2014 CNN Channel Besar (CNN 64\u2192128\u2192256 | LSTM 128\u219264 | Drop 0.5)",
+  "config": {
+    "cnn_channels": [
+      64,
+      128,
+      256
+    ],
+    "lstm_hiddens": [
+      128,
+      64
+    ],
+    "dropout": 0.5,
+    "fc_hidden": 256
+  },
+  "training": {
+    "total_params": 2605586,
+    "trainable_params": 2605586,
+    "model_size_mb": 10.42,
+    "best_epoch": 61,
+    "best_val_acc": 86.25,
+    "batch_size": 8,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "total_time_min": 161.05,
+    "avg_epoch_sec": 96.6
+  },
+  "test_results": {
+    "test_loss": 0.9534,
+    "accuracy": 81.6667,
+    "f1_macro": 81.6168,
+    "f1_weighted": 81.6168,
+    "precision_weighted": 81.8379,
+    "recall_weighted": 81.6667,
+    "per_class_acc": {
+      "1": 95.0,
+      "2": 90.0,
+      "3": 70.0,
+      "8": 95.0,
+      "9": 80.0,
+      "10": 95.0,
+      "a": 90.0,
+      "b": 95.0,
+      "c": 65.0,
+      "d": 70.0,
+      "e": 80.0,
+      "f": 90.0,
+      "buku": 90.0,
+      "dia": 70.0,
+      "saya": 65.0,
+      "keliling": 70.0,
+      "kelompok": 90.0,
+      "sekarang": 70.0
+    }
+  }
+}

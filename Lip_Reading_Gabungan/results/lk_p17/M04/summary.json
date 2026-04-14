@@ -1,0 +1,61 @@
+{
+  "variant_id": "P17-M04",
+  "variant_name": "P17-M04 \u2014 LSTM 3 Layer (CNN 32\u219264\u2192128 | LSTM 128\u2192128\u219264 | Drop 0.5)",
+  "flow_config": "P17 (maxCorners=300, qualityLevel=0.005, blockSize=6)",
+  "config": {
+    "cnn_channels": [
+      32,
+      64,
+      128
+    ],
+    "lstm_hiddens": [
+      128,
+      128,
+      64
+    ],
+    "dropout": 0.5,
+    "fc_hidden": 256,
+    "seq_len": 29,
+    "input_channels": "u, v, magnitude (optical flow P17)"
+  },
+  "training": {
+    "total_params": 2917906,
+    "trainable_params": 2917906,
+    "model_size_mb": 11.67,
+    "best_epoch": 89,
+    "best_val_acc": 45.4167,
+    "batch_size": 8,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "total_time_min": 126.94,
+    "avg_epoch_sec": 76.2
+  },
+  "test_results": {
+    "test_loss": 4.7067,
+    "accuracy": 43.7326,
+    "f1_macro": 44.2905,
+    "f1_weighted": 44.2653,
+    "precision_weighted": 46.6197,
+    "recall_weighted": 43.7326,
+    "per_class_acc": {
+      "1": 55.0,
+      "2": 55.0,
+      "3": 20.0,
+      "8": 55.0,
+      "9": 63.16,
+      "10": 65.0,
+      "a": 50.0,
+      "b": 50.0,
+      "c": 50.0,
+      "d": 40.0,
+      "e": 25.0,
+      "f": 40.0,
+      "buku": 35.0,
+      "dia": 40.0,
+      "saya": 10.0,
+      "keliling": 45.0,
+      "kelompok": 60.0,
+      "sekarang": 30.0
+    }
+  }
+}

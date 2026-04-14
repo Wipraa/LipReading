@@ -1,0 +1,58 @@
+{
+  "model": "Dual-Stream Conv2D + ConvLSTM (RGB + Lucas-Kanade P17)",
+  "dataset": "SIBI Dependent Gabungan",
+  "lk_params": "P17: maxCorners=300, qualityLevel=0.005",
+  "model_info": {
+    "total_params": 3470738,
+    "trainable_params": 3470738,
+    "model_size_mb": 13.88,
+    "gflops": "~0.410 GFLOPs (estimasi)",
+    "inference_ms": 16.65,
+    "rgb_input": "[B, 3, 30, 96, 96]",
+    "flow_input": "[B, 3, 29, 96, 96]"
+  },
+  "training": {
+    "epochs_trained": 100,
+    "best_epoch": 84,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "optimizer": "Adam",
+    "scheduler": "ReduceLROnPlateau (max, factor=0.5, patience=8)",
+    "augmentation": "horizontal flip + negate u channel",
+    "grad_clip": "max_norm=1.0",
+    "best_val_acc": 86.5278,
+    "total_time_minutes": 192.91,
+    "avg_epoch_time_sec": 115.7
+  },
+  "test_results": {
+    "test_loss": 0.8598,
+    "accuracy": 86.0724,
+    "precision_macro": 86.696,
+    "precision_weighted": 86.6775,
+    "recall_macro": 86.038,
+    "recall_weighted": 86.0724,
+    "f1_macro": 85.9349,
+    "f1_weighted": 85.9449,
+    "per_class_acc": {
+      "1": 100.0,
+      "2": 90.0,
+      "3": 70.0,
+      "8": 95.0,
+      "9": 73.68,
+      "10": 100.0,
+      "a": 90.0,
+      "b": 100.0,
+      "c": 70.0,
+      "d": 90.0,
+      "e": 85.0,
+      "f": 95.0,
+      "buku": 90.0,
+      "dia": 80.0,
+      "saya": 80.0,
+      "keliling": 70.0,
+      "kelompok": 80.0,
+      "sekarang": 90.0
+    }
+  }
+}
