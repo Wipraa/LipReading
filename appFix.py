@@ -7,7 +7,7 @@ Mendukung 3 model sekaligus:
 
 Jalankan:
   cd /home/wipra-ranum/Documents/Skripsi/LipReading
-  streamlit run app.py
+  streamlit run appFix.py
 """
 
 import streamlit as st
